@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/app_name"
+        />
+
+    <TextView
+        android:id="@+id/sections"
+        android:layout_below="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="3/4 sections"
+        />
+
+    <ImageButton
+        android:id="@+id/expandableIcon"
+        android:layout_below="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_expand_more_24"
+        android:background="#00FFFFFF"
+        />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_below="@+id/sections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subLayout"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subItemRecyclerView"
+            />
+    </RelativeLayout>
+
+
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/subLayout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:dividerColor="@color/black"
+        />
+
+
+
+</RelativeLayout>
